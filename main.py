@@ -106,6 +106,7 @@ def submit(pid):
                 )
             if response.ok and response.json() == {"msg": "thanks"}:
                 print("Success")
+                return
             else:
                 print(f"Failed {response.status_code}")
         except requests.exceptions.RequestException as e:
